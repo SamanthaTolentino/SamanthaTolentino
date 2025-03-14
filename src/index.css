@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --color-yellow-1: #FDCB46;
+    --color-pink-1: #FA6255;
+    --color-brown-1: #352E28;
+    --color-blue-1: #91BEF8;
+}
+
+.karla-font {
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
