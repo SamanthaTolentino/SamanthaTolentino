@@ -17,18 +17,18 @@ function App() {
   return (
     <div className='karla-font pt-15'>
       <div className='grid grid-cols-12'>
-        <div className='col-start-3 col-span-8 pb-32'>
+        <div className='col-start-3 col-span-8 pb-34'>
           <SectionAbout />
         </div>
         <div className='col-start-11 flex flex-col items-center justify-between'>
           <button>
             <HamburgerMenu />
           </button>
-          {getNavList()}
+          {/* {getNavList()} */}
           <div></div>
         </div>
 
-        <div className='row-start-2 bg-yellow-1 col-span-12 h-96'>hi</div>
+        <div className='row-start-2 bg-yello-1 col-span-12 h-96'>hi</div>
       </div>
     </div>
   )
