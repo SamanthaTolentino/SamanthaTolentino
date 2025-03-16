@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 import SectionAbout from './sections/SectionAbout'
+import SectionSkills from './sections/SectionSkills'
 import HamburgerMenu from './assets/svg/HamburgerMenu'
 
 function App() {
@@ -17,7 +18,8 @@ function App() {
   return (
     <div className='karla-font pt-15'>
       <div className='grid grid-cols-12'>
-        <div className='col-start-3 col-span-8 pb-34'>
+        {/* About */}
+        <div className='col-start-3 col-span-8 pb-15'>
           <SectionAbout />
         </div>
         <div className='col-start-11 flex flex-col items-center justify-between'>
@@ -27,8 +29,10 @@ function App() {
           {/* {getNavList()} */}
           <div></div>
         </div>
-
-        <div className='row-start-2 bg-yello-1 col-span-12 h-96'>hi</div>
+        {/* Skills */}
+        <div className='row-start-2 col-start-3 col-span-8'>
+          <SectionSkills />
+        </div>
       </div>
     </div>
   )
