@@ -10,12 +10,12 @@ import Angular from '../assets/svg/Angular'
 
 const SectionSkills = () => {
   return (
-    <div className='flex flex-col items-center justify-between max-w-4xl mx-auto text-brown-2 px-10'>
-        <div className='mb-7'>
+    <div className='flex flex-col items-center max-w-4xl mx-auto text-brown-2'>
+        <div className='mb-16'>
             {/* <Skills /> */}
             <p className='text-4xl font-bold'>Skills</p>
         </div>
-        <div className='grid grid-cols-6 items-start gap-6'>
+        <div className='grid grid-cols-5 items-center gap-10'>
             <div className='flex flex-col items-center text-xl font-bold'>
                 <HTML />
                 {/* <div>HTML</div> */}
@@ -26,7 +26,9 @@ const SectionSkills = () => {
             </div>
             <ReactSVG />
             <Vue />
-            <Angular />
+            <div className='row-start-2'>
+                <Angular />
+            </div>
         </div>
     </div>
   )

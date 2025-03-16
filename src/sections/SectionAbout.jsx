@@ -10,16 +10,10 @@ const SectionAbout = () => {
         <div className='flex flex-col items-center'>
             <div className='mb-16 relative'>
                 <HelloThere />
-                {/* <div className='absolute top-2 -left-9 -rotate-8'>
-                    <Flower petals='#91BEF8' pistil='#FFF9E6' width={25} />
-                </div> */}
-                <div className='absolute top-6 -left-12'>
+                <div className='absolute top-0 -left-12'>
                     <Flower petals='#FA6255' pistil='#FFF9E6' width={30} />
                 </div>
-                {/* <div className='absolute top-2 -right-9 -rotate-8'>
-                    <Flower petals='#91BEF8' pistil='#FFF9E6' width={25} />
-                </div> */}
-                <div className='absolute top-6 -right-12'>
+                <div className='absolute top-0 -right-12'>
                     <Flower petals='#FA6255' pistil='#FFF9E6' width={30} />
                 </div>
             </div>
