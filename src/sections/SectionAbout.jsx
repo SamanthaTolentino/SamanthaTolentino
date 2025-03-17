@@ -6,7 +6,7 @@ import profilePic from '../assets/img/profile_pic.png'
 
 const SectionAbout = () => {
   return (
-    <div className='flex max-w-4xl mx-auto text-brown-1'>
+    <div className='flex max-w-4xl mx-auto text-brown-1 px-16 mb-5'>
         <div className='flex flex-col items-center'>
             <div className='mb-16 relative'>
                 <HelloThere />
@@ -19,7 +19,7 @@ const SectionAbout = () => {
             </div>
             {/* <p className='text-4xl font-bold mb-3'>I'm Samantha Tolentino.</p>
             <p className='text-3xl font-medium uppercase'>Web Developer</p> */}
-            <div className='flex items-center mb-12'>
+            <div className='flex items-center mb-5'>
                 <div className='mr-20'>
                     <div className='relative'>
                         <div className='relative bg-yellow-1 aspect-square w-full max-w-2xs min-w-2xs rounded-full overflow-clip flex items-end justify-center'>
@@ -39,10 +39,8 @@ const SectionAbout = () => {
                     <p className='font-medium mb-4'>www.github.com/SamTole</p>
                 </div>
             </div>
-            <div className='px-10'>
-                <div className='border-y-1 border-brown-1 py-12 px-6'>
-                    Hi, my name is Samantha Tolentino. I’m lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Hi, my name is Samantha Tolentino. I’m lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                </div>
+            <div>
+                Hi, my name is Samantha Tolentino. I’m lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Hi, my name is Samantha Tolentino. I’m lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
             </div>
         </div>
     </div>

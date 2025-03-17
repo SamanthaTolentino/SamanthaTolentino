@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 import SectionAbout from './sections/SectionAbout'
 import SectionSkills from './sections/SectionSkills'
+import SectionProjects from './sections/SectionProjects'
 import HamburgerMenu from './assets/svg/HamburgerMenu'
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
     <div className='karla-font pt-15'>
       <div className='grid grid-cols-12'>
         {/* About */}
-        <div className='col-start-3 col-span-8 pb-15'>
+        <div className='col-start-3 col-span-8'>
           <SectionAbout />
         </div>
         <div className='col-start-11 flex flex-col items-center justify-between'>
@@ -32,6 +33,10 @@ function App() {
         {/* Skills */}
         <div className='row-start-2 col-start-3 col-span-8'>
           <SectionSkills />
+        </div>
+        {/* Projects */}
+        <div className='row-start-3 col-start-3 col-span-8'>
+          <SectionProjects />
         </div>
       </div>
     </div>
