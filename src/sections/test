@@ -35,3 +35,44 @@ const SectionSkills = () => {
 }
 
 export default SectionSkills
+
+
+
+
+import React from 'react'
+
+import Skills from '../assets/svg/Skills'
+import HTML from '../assets/svg/HTML'
+import CSS from '../assets/svg/CSS'
+import JavaScript from '../assets/svg/JavaScript'
+import ReactSVG from '../assets/svg/ReactSVG'
+import Vue from '../assets/svg/Vue'
+import Angular from '../assets/svg/Angular'
+import Node from '../assets/svg/Node'
+
+const SectionSkills = () => {
+  return (
+    <div className='flex flex-col items-center justify-between max-w-4xl mx-auto text-brown-2 px-10'>
+        <div className='mb-7'>
+            {/* <Skills /> */}
+            <p className='text-4xl font-bold italic'>Skills</p>
+        </div>
+        <div className='grid grid-cols-7 items-start gap-9'>
+            <div className='flex flex-col items-center text-xl font-bold'>
+                <HTML />
+                {/* <div>HTML</div> */}
+            </div>
+            <CSS />
+            <div className='bg-black w-fit'>
+                <JavaScript />
+            </div>
+            <ReactSVG />
+            <Vue />
+            <Angular />
+            <Node />
+        </div>
+    </div>
+  )
+}
+
+export default SectionSkills

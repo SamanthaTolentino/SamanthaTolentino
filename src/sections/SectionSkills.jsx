@@ -7,29 +7,37 @@ import JavaScript from '../assets/svg/JavaScript'
 import ReactSVG from '../assets/svg/ReactSVG'
 import Vue from '../assets/svg/Vue'
 import Angular from '../assets/svg/Angular'
+import Node from '../assets/svg/Node'
 
 const SectionSkills = () => {
-  return (
-    <div className='flex flex-col items-center justify-between max-w-4xl mx-auto text-brown-2 px-10'>
-        <div className='mb-7'>
-            {/* <Skills /> */}
-            <p className='text-4xl font-bold'>Skills</p>
+    const skillsComponents = [
+        { component: <HTML />, name: 'HTML' },
+        { component: <CSS />, name: 'CSS' },
+        { component: <JavaScript />, name: 'JavaScript' },
+        { component: <ReactSVG />, name: 'React' },
+        { component: <Vue />, name: 'Vue' },
+        { component: <Angular />, name: 'Angular' },
+        { component: <Node />, name: 'Node' },
+    ]
+
+    const getSkillsDiv = (skill, index) => {
+        return <div key={index} className='flex items-center text-xl font-medium shadow-md rounded-lg px-5 py-2'>
+            <div className='mr-3'>{skill.component}</div>
+            <p className='grow'>{skill.name}</p>
         </div>
-        <div className='grid grid-cols-6 items-start gap-6'>
-            <div className='flex flex-col items-center text-xl font-bold'>
-                <HTML />
-                {/* <div>HTML</div> */}
+        
+    }
+
+    return (
+        <div className='flex flex-col items-center justify-between max-w-4xl mx-auto text-brown-1 w-full'>
+            <div className='mb-7'>
+                <p className='text-4xl font-bold italic text-brown-2'>Skills</p>
             </div>
-            <CSS />
-            <div className='bg-black w-fit'>
-                <JavaScript />
+            <div className='grid grid-cols-4 items-start gap-6'> 
+                {skillsComponents.map((skill, index) => getSkillsDiv(skill, index))}
             </div>
-            <ReactSVG />
-            <Vue />
-            <Angular />
         </div>
-    </div>
-  )
+    )
 }
 
 export default SectionSkills
