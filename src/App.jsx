@@ -35,7 +35,7 @@ function App() {
           <SectionSkills />
         </div>
         {/* Projects */}
-        <div className='row-start-3 col-start-3 col-span-8'>
+        <div className='row-start-3 col-span-12'>
           <SectionProjects />
         </div>
       </div>

@@ -6,14 +6,14 @@ import profilePic from '../assets/img/profile_pic.png'
 
 const SectionAbout = () => {
   return (
-    <div className='flex max-w-4xl mx-auto text-brown-1 px-16 mb-5'>
+    <div className='flex max-w-4xl mx-auto text-brown-1 px-15 mb-5'>
         <div className='flex flex-col items-center'>
             <div className='mb-16 relative'>
                 <HelloThere />
-                <div className='absolute top-0 -left-12'>
+                <div className='absolute top-0 -left-10'>
                     <Flower petals='#FA6255' pistil='#FFF9E6' width={30} />
                 </div>
-                <div className='absolute top-0 -right-12'>
+                <div className='absolute top-0 -right-10'>
                     <Flower petals='#FA6255' pistil='#FFF9E6' width={30} />
                 </div>
             </div>

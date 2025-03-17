@@ -31,15 +31,15 @@ const SectionSkills = () => {
     ]
 
     const getSkillsDiv = (skill, index) => {
-        return <div key={index} className={`bg-tan-1 flex items-center shadow-sm rounded-md px-5 py-3 font-medium`}>
-            <div className='mr-2'>{skill.component}</div>
+        return <div key={index} className={`flex items-center rounded-md px-5 py-3 font-medium`}>
+            <div className='mr-3'>{skill.component}</div>
             <p className='grow'>{skill.name}</p>
         </div>
         
     }
 
     return (
-        <div className='flex flex-col justify-between max-w-4xl mx-auto text-brown-1 w-full px-16 border-b-1 border-brown-3 pb-15 mb-15'>
+        <div className='flex flex-col justify-between max-w-4xl mx-auto text-brown-1 w-full px-15 mb-8'>
             <div className='mb-5'>
                 <p className='text-xl text-pink-1 uppercase font-bold'>My Skills</p>
             </div>
