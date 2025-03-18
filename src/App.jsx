@@ -20,7 +20,7 @@ function App() {
     <div className='karla-font pt-15'>
       <div className='grid grid-cols-12'>
         {/* About */}
-        <div className='col-start-3 col-span-8'>
+        <div className='col-start-3 col-span-8 pt-15'>
           <SectionAbout />
         </div>
         <div className='col-start-11 flex flex-col items-center justify-between'>
@@ -31,12 +31,16 @@ function App() {
           <div></div>
         </div>
         {/* Skills */}
-        <div className='row-start-2 col-start-3 col-span-8'>
-          <SectionSkills />
+        <div className='bg-white row-start-2 col-span-12'>
+          <div className='row-start-2 col-start-3 col-span-8'>
+            <SectionSkills />
+          </div>
         </div>
         {/* Projects */}
-        <div className='row-start-3 col-span-12'>
-          <SectionProjects />
+        <div className='bg-tan-1 row-start-3 col-span-12'>
+          <div className='row-start-3 col-span-12'>
+            <SectionProjects />
+          </div>
         </div>
       </div>
     </div>
