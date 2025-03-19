@@ -31,7 +31,7 @@ const SectionSkills = () => {
     ]
 
     const getSkillsDiv = (skill, index) => {
-        return <div key={index} className={`flex items-center rounded-md py-3 font-medium`}>
+        return <div key={index} className={`flex items-center justify-center rounded-md py-3 font-medium`}>
             <div className='mr-3'>{skill.component}</div>
             <p className=''>{skill.name}</p>
         </div>
@@ -42,9 +42,9 @@ const SectionSkills = () => {
         <div className='flex flex-col justify-between max-w-4xl mx-auto text-brown-1 w-full px-15 mb-3'>
             <div className=''>
                 <div className='mb-3'>
-                    {/* <p className='text-xl text-blue-2 uppercase font-bold'>My Skills</p> */}
+                    <p className='text-xl text-blue-2 uppercase font-bold'>My Skills</p>
                 </div>
-                <div className='grid grid-cols-6 items-start gap-4'> 
+                <div className='grid grid-cols-4 items-start gap-4'> 
                     {skillsComponents.map((skill, index) => getSkillsDiv(skill, index))}
                 </div>
                 {/* <div className='grid grid-cols-6 items-start gap-8'> 
