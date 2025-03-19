@@ -50,11 +50,11 @@ function App() {
         initial='hidden'
         animate='show'
       >
-        <motion.div className='col-start-3 col-span-8 flex flex-col items-center'
+        <motion.div className='col-start-3 col-span-8 flex flex-col items-center mb-4'
           variants={sectionVariants}
         >
           <HelloThere />
-          <div className='grow flex flex-col items-center mb-3'>      
+          <div className='grow flex flex-col items-center'>      
               <p className='text-4xl font-bold mb-3'>I'm Samantha Tolentino.</p>
               <p className='text-3xl font-medium uppercase'>Web Developer</p>
           </div>

@@ -6,7 +6,7 @@ import AquastockPic from '../assets/img/aquastock_pic.png'
 const SectionProjects = () => {
   return (
     <div className='flex flex-col max-w-4xl mx-auto text-brown-1 px-15 mb-6'>
-      <p className='text-xl text-blue-2 uppercase font-bold mb-3'>Projects</p>
+      <p className='text-xl text-blue-2 uppercase font-bold mb-3'>Personal Projects</p>
       <div className='flex mb-5'>
         <div className='w-1/2 mr-8'>
             <img src={TaskAppPic} alt="task_app_pic.png" className='w-full rounded-xl' />
