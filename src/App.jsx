@@ -1,11 +1,38 @@
 import { useState } from 'react'
-
+import { motion } from 'framer-motion'
+import HelloThere from './assets/svg/HelloThere'
 import SectionProfile from './sections/SectionProfile'
 import SectionAbout from './sections/SectionAbout'
+import SectionSkills from './sections/SectionSkills'
 import SectionProjects from './sections/SectionProjects'
 import HamburgerMenu from './assets/svg/HamburgerMenu'
 
 function App() {
+  const sectionContainerVariants = {
+    hidden: { 
+      opacity: 0,
+    },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        duration: 0.3,
+        when: 'beforeChildren'
+      }
+    } 
+  }
+
+  const sectionVariants = {
+    hidden: { opacity: 0, y: -50 },
+    show: { 
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5, ease: 'easeOut'
+      }
+    }
+  }
+
   const getNavList = () => {
     return <div className='text-4xl'>
       {
@@ -18,31 +45,58 @@ function App() {
 
   return (
     <div className='karla-font pt-15'>
-      <div className='grid grid-cols-12'>
+      <motion.div className='grid grid-cols-12'
+        variants={sectionContainerVariants}
+        initial='hidden'
+        animate='show'
+      >
+        <motion.div className='col-start-3 col-span-8 flex flex-col items-center'
+          variants={sectionVariants}
+        >
+          <HelloThere />
+          <div className='grow flex flex-col items-center mb-3'>      
+              <p className='text-4xl font-bold mb-3'>I'm Samantha Tolentino.</p>
+              <p className='text-3xl font-medium uppercase'>Web Developer</p>
+          </div>
+        </motion.div>
         {/* Profile */}
-        <div className='col-start-3 col-span-8'>
+        <motion.div className='row-start-2 col-start-3 col-span-8'
+          variants={sectionVariants}
+        >
           <SectionProfile />
-        </div>
+        </motion.div>
+
         <div className='col-start-11 flex flex-col items-center justify-between'>
           <button>
             <HamburgerMenu />
           </button>
-          {getNavList()}
+          {/* {getNavList()} */}
           <div></div>
         </div>
+        
         {/* About */}
-        <div className='bg-white row-start-2 col-span-12'>
-          <div className='row-start-2 col-start-3 col-span-8'>
+        <motion.div className='row-start-3 col-span-12'
+          variants={sectionVariants}
+        >
+          <div className='row-start-3 col-start-3 col-span-8'>
             <SectionAbout />
           </div>
-        </div>
+        </motion.div>
+        {/* Skills */}
+        <motion.div className='row-start-4 col-start-3 col-span-8'
+          variants={sectionVariants}
+        >
+            <SectionSkills />
+        </motion.div>
         {/* Projects */}
-        <div className='bg-blue row-start-3 col-span-12'>
-          <div className='row-start-3 col-span-12'>
+        <motion.div className='bg-blue row-start-5 col-span-12'
+          variants={sectionVariants}
+        >
+          <div className='row-start-5 col-span-12'>
             <SectionProjects />
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   )
 }
