@@ -1,15 +1,15 @@
 import { useState } from 'react'
 
+import SectionProfile from './sections/SectionProfile'
 import SectionAbout from './sections/SectionAbout'
-import SectionSkills from './sections/SectionSkills'
 import SectionProjects from './sections/SectionProjects'
 import HamburgerMenu from './assets/svg/HamburgerMenu'
 
 function App() {
   const getNavList = () => {
-    return <div className='text-5xl'>
+    return <div className='text-4xl'>
       {
-        [...Array(4)].map((i) => {
+        [...Array(3)].map((i) => {
           return <div key={i} className='mb-5'>•</div>
         })
       }
@@ -19,25 +19,25 @@ function App() {
   return (
     <div className='karla-font pt-15'>
       <div className='grid grid-cols-12'>
-        {/* About */}
+        {/* Profile */}
         <div className='col-start-3 col-span-8'>
-          <SectionAbout />
+          <SectionProfile />
         </div>
         <div className='col-start-11 flex flex-col items-center justify-between'>
           <button>
             <HamburgerMenu />
           </button>
-          {/* {getNavList()} */}
+          {getNavList()}
           <div></div>
         </div>
-        {/* Skills */}
-        <div className='bg-blue-2 row-start-2 col-span-12'>
+        {/* About */}
+        <div className='bg-white row-start-2 col-span-12'>
           <div className='row-start-2 col-start-3 col-span-8'>
-            <SectionSkills />
+            <SectionAbout />
           </div>
         </div>
         {/* Projects */}
-        <div className=' row-start-3 col-span-12'>
+        <div className='bg-blue row-start-3 col-span-12'>
           <div className='row-start-3 col-span-12'>
             <SectionProjects />
           </div>

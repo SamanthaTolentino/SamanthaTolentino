@@ -1,61 +1,59 @@
 import React from 'react'
-import HelloThere from '../assets/svg/HelloThere'
-import Stars from '../assets/svg/Stars'
-import Flower from '../assets/svg/Flower'
-import profilePic from '../assets/img/profile_pic.png'
 
-const SectionAbout = () => {
-  return (
-    <div className='flex max-w-4xl mx-auto text-brown-1 px-15 mb-1'>
-        <div className='flex flex-col items-center'>
-            <HelloThere />
-            {/* <p className='text-4xl font-bold mb-3'>I'm Samantha Tolentino.</p>
-            <p className='text-3xl font-medium uppercase mb-5'>Web Developer</p> */}
-            <div className='flex items-center mb-5'>
-                <div className='relative'>
-                    <div className='relative bg-tan-1 aspect-square w-full max-w-2xs min-w-2xs rounded-full overflow-clip flex items-end justify-center shadow'>
-                        <img src={profilePic} alt="profile_pic.png" className='w-2/3 absolute top-1/9'  />
-                    </div>
-                    <div className='absolute top-10 -left-10 rotate-10'>
-                        <Flower petals='#6677C9' pistil='#FFF9E6' width={40} />
-                    </div>
-                    <div className='absolute top-3 -left-2 -rotate-10'>
-                        <Flower petals='#91BEF8' pistil='#FFF9E6' width={30} />
-                    </div>
-                    <div className='absolute bottom-10 -right-10 -rotate-10'>
-                        <Flower petals='#91BEF8' pistil='#FFF9E6' width={40} />
-                    </div>
-                    <div className='absolute bottom-3 -right-2 rotate-10'>
-                        <Flower petals='#6677C9' pistil='#FFF9E6' width={30} />
-                    </div>
-                </div>
-            </div>
-            <div className='grow flex flex-col items-center font-bold mb-3'>      
-                <p className='text-4xl mb-3'>I'm Samantha Tolentino.</p>
-                <p className='text-3xl uppercase'>Web Developer</p>
-            </div>
-            <div className='relative'>
+import Flower from '../assets/svg/Flower'
+import HTML from '../assets/svg/HTML'
+import CSS from '../assets/svg/CSS'
+import JavaScript from '../assets/svg/JavaScript'
+import ReactSVG from '../assets/svg/ReactSVG'
+import Vue from '../assets/svg/Vue'
+import Angular from '../assets/svg/Angular'
+import Tailwind from '../assets/svg/Tailwind'
+import Node from '../assets/svg/Node'
+import Mongo from '../assets/svg/Mongo'
+import SQL from '../assets/svg/SQL'
+import Git from '../assets/svg/Git'
+import Figma from '../assets/svg/Figma'
+
+const SectionSkills = () => {
+    const skillsComponents = [
+        { component: <HTML />, name: 'HTML' },
+        { component: <CSS />, name: 'CSS' },
+        { component: <JavaScript />, name: 'JavaScript' },
+        { component: <ReactSVG />, name: 'React' },
+        { component: <Vue />, name: 'Vue' },
+        { component: <Angular />, name: 'Angular' },
+        { component: <Tailwind />, name: 'Tailwind' },
+        { component: <Node />, name: 'Node' },
+        { component: <Mongo />, name: 'MongoDB' },
+        { component: <SQL />, name: 'SQL' },
+        { component: <Git />, name: 'Git' },
+        { component: <Figma />, name: 'Figma' },
+    ]
+
+    const getSkillsDiv = (skill, index) => {
+        return <div key={index} className={`flex items-center justify-center rounded-md py-3 font-medium`}>
+            <div className='mr-3'>{skill.component}</div>
+            <p className=''>{skill.name}</p>
+        </div>
+        
+    }
+
+    return (
+        <div className='flex flex-col justify-between max-w-4xl mx-auto w-full px-15 py-8'>
+            <div className='flex flex-col mb-6'>
+                <p className='uppercase mb-1 text-xl text-blue-2 font-bold'>About Me</p>
                 <p>
                     Hi, my name is Samantha Tolentino. I’m lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Hi, my name is Samantha Tolentino. I’m lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
-                {/* <div>
-                    <p className='text-xl text-blue-2 uppercase mb-1'>Email</p>
-                    <p className='font-medium mb-4'>S.Tolentino0828@gmail.com</p>
-                    <p className='text-xl text-blue-2 uppercase mb-1'>GitHub</p>
-                    <p className='font-medium mb-4'>www.github.com/SamTole</p>
-                    <p className='text-xl text-blue-2 uppercase mb-1'>LinkedIn</p>
-                    <p className='font-medium mb-4'>www.linkedin.com/in/samanthatolentino/</p>
-                </div> */}
-                {/* <div className='absolute -bottom-2 -right-8 -rotate-10'>
-                    <Flower petals='#FDCB46' pistil='#FFF9E6' width={40} />
+            </div>
+            <div className=''>
+                <p className='text-xl text-blue-2 uppercase font-bold mb-1'>My Skills</p>
+                <div className='grid grid-cols-6 items-start gap-4'> 
+                    {skillsComponents.map((skill, index) => getSkillsDiv(skill, index))}
                 </div>
-                <div className='absolute -bottom-8 right-0 rotate-10'>
-                    <Flower petals='#91BEF8' pistil='#FFF9E6' width={30} />
-                </div> */}
             </div>
         </div>
-    </div>
-  )
+    )
 }
 
-export default SectionAbout
+export default SectionSkills
