@@ -21,7 +21,7 @@ const SectionProjects = () => {
   }
 
   return (
-    <div className='flex flex-col max-w-4xl mx-auto text-brown-1 px-15 pb-6 font-medium'>
+    <div className='flex flex-col max-w-4xl mx-auto text-brown-1 px-15 pb-8 font-medium'>
       <div className='flex items-center mb-2'>
           <motion.div
               initial={{ rotate: 0 }}
@@ -44,13 +44,13 @@ const SectionProjects = () => {
             </div>
         </div>
       </div>
-      <div className='flex flex-col'>
+      <div className='flex flex-col ml-3'>
         <img src={AquastockGif} alt="aquastock_gif.png" className='w-full rounded mb-3 shadow' />
         <div className='flex flex-col'>
             <p className='text-4xl font-bold mb-1'>Aquastock</p>
             <p className='font-semibold text-brown-2 mb-2'>MongoDB, Express, React, Node.js, TailwindCSS</p>
             <p className='mb-3'>A cute and simple web application inspired by a personal hobby of mine: fish-keeping! It provides personalized fish recommendations based on user input such as tank size, temperament, and difficulty level.</p>
-            <div className='flex'>
+            <div className='flex items-center'>
               {btnComponent('Demo', 'https://aquastock.onrender.com/')}
               {btnComponent('GitHub', 'https://github.com/SamTole/aquastock')}
             </div>

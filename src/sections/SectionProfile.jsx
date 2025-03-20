@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+
 import Flower from '../assets/svg/Flower'
 import profilePic from '../assets/img/profile_pic.png'
 
