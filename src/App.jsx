@@ -112,8 +112,9 @@ function App() {
         <motion.div className='row-start-6 col-span-12 bg-yellow-1 pb-6 pt-8'
           variants={sectionVariants}
         >
-          <div className='flex items-center justify-center text-sm'>
+          <div className='flex flex-col items-center justify-center text-sm'>
             {getSocialMediaIcons()}
+            <p className='mt-5'>&#169; 2025 - Present, Samantha Tolentino. All illustrations created by me.</p>
           </div>
         </motion.div>
       </motion.div>
