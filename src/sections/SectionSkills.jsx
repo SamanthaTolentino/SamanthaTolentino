@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 import HTML from '../assets/svg/HTML'
 import CSS from '../assets/svg/CSS'
@@ -30,10 +31,12 @@ const SectionSkills = () => {
     ]
 
     const getSkillsDiv = (skill, index) => {
-        return <div key={index} className={`flex items-center justify-center rounded-md py-3 font-medium`}>
+        return <motion.div key={index} className={`flex items-center justify-center rounded-md py-3 font-medium`}
+            whileHover={{ scale: 1.15 }}
+        >
             <div className='mr-3'>{skill.component}</div>
             <p className=''>{skill.name}</p>
-        </div> 
+        </motion.div> 
     }
 
   return (
