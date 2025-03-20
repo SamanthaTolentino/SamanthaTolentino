@@ -1,5 +1,7 @@
-import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import HelloThere from './assets/svg/HelloThere'
 import SectionProfile from './sections/SectionProfile'
 import SectionAbout from './sections/SectionAbout'
@@ -44,20 +46,17 @@ function App() {
   }
 
   return (
-    <div className='karla-font pt-15'>
+    <div className='karla-font pt-15 text-brown-1'>
       <motion.div className='grid grid-cols-12'
         variants={sectionContainerVariants}
         initial='hidden'
         animate='show'
       >
-        <motion.div className='col-start-3 col-span-8 flex flex-col items-center mb-4'
+        <motion.div className='col-start-3 col-span-8 flex flex-col items-center'
           variants={sectionVariants}
         >
           <HelloThere />
-          <div className='grow flex flex-col items-center'>      
-              <p className='text-4xl font-bold mb-3'>I'm Samantha Tolentino.</p>
-              <p className='text-3xl font-medium uppercase'>Web Developer</p>
-          </div>
+
         </motion.div>
         {/* Profile */}
         <motion.div className='row-start-2 col-start-3 col-span-8'
@@ -66,30 +65,42 @@ function App() {
           <SectionProfile />
         </motion.div>
 
-        <div className='col-start-11 flex flex-col items-center justify-between'>
+        <div className='col-start-11 flex items-center justify-between'>
           <button>
-            <HamburgerMenu />
+            <FontAwesomeIcon icon={faEnvelope} />
+          </button>
+          <button>
+            <FontAwesomeIcon icon={faGithub} />
+          </button>
+          <button>
+            <FontAwesomeIcon icon={faLinkedin} />
           </button>
           {/* {getNavList()} */}
           <div></div>
         </div>
         
         {/* About */}
-        <motion.div className='row-start-3 col-span-12'
+        <motion.div className='row-start-3 col-span-12 bg-yellow-1'
           variants={sectionVariants}
         >
           <div className='row-start-3 col-start-3 col-span-8'>
             <SectionAbout />
           </div>
         </motion.div>
+
         {/* Skills */}
-        <motion.div className='row-start-4 col-start-3 col-span-8'
+        <motion.div className='row-start-4 col-span-12 bg-yellow-1'
           variants={sectionVariants}
         >
-            <SectionSkills />
+          <div className='row-start-4 col-start-3 col-span-8'
+            variants={sectionVariants}
+          >
+              <SectionSkills />
+          </div>
         </motion.div>
+
         {/* Projects */}
-        <motion.div className='bg-blue row-start-5 col-span-12'
+        <motion.div className='bg-blue row-start-5 col-span-12 bg-yellow-1'
           variants={sectionVariants}
         >
           <div className='row-start-5 col-span-12'>

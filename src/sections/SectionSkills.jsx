@@ -13,6 +13,7 @@ import Mongo from '../assets/svg/Mongo'
 import SQL from '../assets/svg/SQL'
 import Git from '../assets/svg/Git'
 import Figma from '../assets/svg/Figma'
+import Flower from '../assets/svg/Flower'
 
 const SectionSkills = () => {
     const skillsComponents = [
@@ -40,8 +41,17 @@ const SectionSkills = () => {
     }
 
   return (
-    <div className='max-w-4xl mx-auto px-15 mb-6'>
-        <p className='text-xl text-blue-2 uppercase font-bold mb-1'>My Skills</p>
+    <div className='max-w-4xl mx-auto px-15 pb-6'>
+        <div className='flex items-center mb-1'>
+            <motion.div
+                initial={{ rotate: 0 }}
+                animate={{ rotate: -75 }}
+                transition={{ repeat: Infinity, repeatType: "mirror", ease: 'easeInOut', duration: 2.3 }}
+            >
+                <Flower petals='#FA6255' pistil='#FFF' width={23} />
+            </motion.div>
+            <p className='uppercase text-xl font-bold ml-2 mt-1'>My Skills</p>
+        </div>
         <div className='grid grid-cols-6 items-start gap-4'> 
             {skillsComponents.map((skill, index) => getSkillsDiv(skill, index))}
         </div>
