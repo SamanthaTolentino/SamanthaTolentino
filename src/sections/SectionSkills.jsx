@@ -1,6 +1,6 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
-import Skills from '../assets/svg/Skills'
 import HTML from '../assets/svg/HTML'
 import CSS from '../assets/svg/CSS'
 import JavaScript from '../assets/svg/JavaScript'
@@ -13,6 +13,7 @@ import Mongo from '../assets/svg/Mongo'
 import SQL from '../assets/svg/SQL'
 import Git from '../assets/svg/Git'
 import Figma from '../assets/svg/Figma'
+import Flower from '../assets/svg/Flower'
 
 const SectionSkills = () => {
     const skillsComponents = [
@@ -31,28 +32,31 @@ const SectionSkills = () => {
     ]
 
     const getSkillsDiv = (skill, index) => {
-        return <div key={index} className={`flex items-center rounded-md py-3 font-medium`}>
+        return <motion.div key={index} className={`flex items-center justify-center rounded-md py-3 font-medium`}
+            whileHover={{ scale: 1.15 }}
+        >
             <div className='mr-3'>{skill.component}</div>
             <p className=''>{skill.name}</p>
-        </div>
-        
+        </motion.div> 
     }
 
-    return (
-        <div className='flex flex-col justify-between max-w-4xl mx-auto text-brown-1 w-full px-15 mb-3'>
-            <div className=''>
-                <div className='mb-3'>
-                    {/* <p className='text-xl text-blue-2 uppercase font-bold'>My Skills</p> */}
-                </div>
-                <div className='grid grid-cols-6 items-start gap-4'> 
-                    {skillsComponents.map((skill, index) => getSkillsDiv(skill, index))}
-                </div>
-                {/* <div className='grid grid-cols-6 items-start gap-8'> 
-                    {skillsComponents.map((skill, index) => getSkillsDiv(skill, index))}
-                </div> */}
-            </div>
+  return (
+    <div className='max-w-4xl mx-auto px-15 pb-6'>
+        <div className='flex items-center mb-1'>
+            <motion.div
+                initial={{ rotate: 0 }}
+                animate={{ rotate: -75 }}
+                transition={{ repeat: Infinity, repeatType: "mirror", ease: 'easeInOut', duration: 2.3 }}
+            >
+                <Flower petals='#FA6255' pistil='#FFF' width={23} />
+            </motion.div>
+            <p className='uppercase text-xl font-bold ml-2 mt-1'>My Skills</p>
         </div>
-    )
+        <div className='grid grid-cols-6 items-start gap-4'> 
+            {skillsComponents.map((skill, index) => getSkillsDiv(skill, index))}
+        </div>
+    </div>
+  )
 }
 
 export default SectionSkills

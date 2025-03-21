@@ -1,58 +1,28 @@
 import React from 'react'
-import HelloThere from '../assets/svg/HelloThere'
-import Stars from '../assets/svg/Stars'
+import { motion } from 'framer-motion'
+
 import Flower from '../assets/svg/Flower'
-import profilePic from '../assets/img/profile_pic.png'
 
 const SectionAbout = () => {
-  return (
-    <div className='flex max-w-4xl mx-auto text-brown-1 px-15 mb-'>
-        <div className='flex flex-col items-center'>
-            {/* <div className='mb-16 relative'>
-                <HelloThere />
-            </div> */}
-            {/* <p className='text-4xl font-bold mb-3'>I'm Samantha Tolentino.</p>
-            <p className='text-3xl font-medium uppercase'>Web Developer</p> */}
-            <div className='flex items-center mb-3'>
-                <div className='mr-20'>
-                    <div className='relative'>
-                        <div className='relative bg-tan-1 aspect-square w-full max-w-2xs min-w-2xs rounded-full overflow-clip flex items-end justify-center'>
-                            <img src={profilePic} alt="profile_pic.png" className='w-2/3 absolute top-1/9'  />
-                        </div>
-                        <div className='absolute top-0 left-4 -rotate-10'>
-                            <Flower petals='#91BEF8' pistil='#FFF9E6' width={30} />
-                        </div>
-                        <div className='absolute top-6 -left-4 rotate-10'>
-                            <Flower petals='#FDCB46' pistil='#FFF9E6' width={40} />
-                        </div>
-                    </div>
+    return (
+        <div className='flex flex-col justify-between max-w-4xl mx-auto w-full px-15 py-6'>
+            <div className='flex flex-col'>
+                <div className='flex items-center'>
+                    <motion.div
+                        initial={{ rotate: 0 }}
+                        animate={{ rotate: -75 }}
+                        transition={{ repeat: Infinity, repeatType: "mirror", ease: 'easeInOut', duration: 2.3 }}
+                    >                        
+                        <Flower petals='#FA6255' pistil='#FFF' width={23} />
+                    </motion.div>
+                    <p className='uppercase text-xl font-bold ml-2 mt-1'>About Me</p>
                 </div>
-                <div className='grow flex flex-col font-bold'>      
-                    <p className='text-4xl mb-4'>Samantha Tolentino</p>
-                    <p className='text-3xl uppercase mb-6'>Web Developer</p>
-                    <p className='text-xl text-blue-2 uppercase mb-1'>Email</p>
-                    <p className='font-medium mb-4'>S.Tolentino0828@gmail.com</p>
-                    <p className='text-xl text-blue-2 uppercase mb-1'>GitHub</p>
-                    <p className='font-medium mb-4'>www.github.com/SamTole</p>
-                    <p className='text-xl text-blue-2 uppercase mb-1'>LinkedIn</p>
-                    {/* Make link */}
-                    <p className='font-medium mb-4'>www.linkedin.com/in/samanthatolentino/</p>
-                </div>
-            </div>
-            <div className='relative'>
-                <p>
-                    Hi, my name is Samantha Tolentino. I’m lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Hi, my name is Samantha Tolentino. I’m lorem ipsum dolor sit amet. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. winer  winer winer winer winer winer winer winer winer
+                <p className='font-medium ml-3'>
+                    Pleasure to meet you! I'm Samantha Tolentino, a Full Stack Web Developer based in the New Jersey and New York areas. I earned my B.S. in Information Technology with a specialization in Web Applications from the New Jersey Institute of Technology. I have two years of professional experience as a Software Engineer and am knowledgeable in both front end and back end technologies. I'm particularly passionate about front end languages and frameworks, and I thrive on building visually stunning, user-friendly websites!
                 </p>
-                {/* <div className='absolute -bottom-2 -right-8 -rotate-10'>
-                    <Flower petals='#FDCB46' pistil='#FFF9E6' width={40} />
-                </div>
-                <div className='absolute -bottom-8 right-0 rotate-10'>
-                    <Flower petals='#91BEF8' pistil='#FFF9E6' width={30} />
-                </div> */}
             </div>
         </div>
-    </div>
-  )
+    )
 }
 
 export default SectionAbout

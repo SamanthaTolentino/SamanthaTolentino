@@ -16,6 +16,10 @@
     --color-purple-2: #E1DFFF;
 }
 
+body {
+    background: #FFF9E6;
+}
+
 .karla-font {
     font-family: "Karla", sans-serif;
     font-optical-sizing: auto;
