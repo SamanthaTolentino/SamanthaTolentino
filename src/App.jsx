@@ -48,7 +48,7 @@ function App() {
       >
         <FontAwesomeIcon icon={faFile} size='xl'  />
       </motion.a>
-      <motion.a href='https://github.com/SamTole' target="_blank" title='Github' className='mr-2 border py-2 px-3 rounded-xl'
+      <motion.a href='https://github.com/SamanthaTolentino' target="_blank" title='Github' className='mr-2 border py-2 px-3 rounded-xl'
         whileHover={{ scale: 1.15 }}
       >
         <FontAwesomeIcon icon={faGithub} size='xl' />

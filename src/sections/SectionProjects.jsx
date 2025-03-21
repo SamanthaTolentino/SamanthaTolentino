@@ -40,7 +40,7 @@ const SectionProjects = () => {
             <p className='mb-3'>A straightforward and user-friendly task management application built using the MERN Stack. Key features include user authentication and the ability to create, edit, and delete tasks and categories.</p>
             <div className='flex items-center'>
               {btnComponent('Demo', 'https://listittaskmanager.onrender.com/login')}
-              {btnComponent('GitHub', 'https://github.com/SamTole/listit')}
+              {btnComponent('GitHub', 'https://github.com/SamanthaTolentino/listit')}
             </div>
         </div>
       </div>
@@ -52,7 +52,7 @@ const SectionProjects = () => {
             <p className='mb-3'>A cute and simple web application inspired by a personal hobby of mine: fish-keeping! It provides personalized fish recommendations based on user input such as tank size, temperament, and difficulty level.</p>
             <div className='flex items-center'>
               {btnComponent('Demo', 'https://aquastock.onrender.com/')}
-              {btnComponent('GitHub', 'https://github.com/SamTole/aquastock')}
+              {btnComponent('GitHub', 'https://github.com/SamanthaTolentino/aquastock')}
             </div>
         </div>
       </div>
