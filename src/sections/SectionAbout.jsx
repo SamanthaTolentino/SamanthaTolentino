@@ -5,7 +5,7 @@ import Flower from '../assets/svg/Flower'
 
 const SectionAbout = () => {
     return (
-        <div className='flex flex-col justify-between max-w-4xl mx-auto w-full px-15 py-6'>
+        <div className='flex flex-col justify-between max-w-4xl mx-auto w-full lg:px-15 px-8 py-6'>
             <div className='flex flex-col'>
                 <div className='flex items-center'>
                     <motion.div

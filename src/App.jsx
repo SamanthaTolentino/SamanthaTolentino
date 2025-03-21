@@ -38,22 +38,22 @@ function App() {
 
   const getSocialMediaIcons = () => {
     return <div className='flex items-center'>
-      <motion.a href='mailto:S.Tolentino0828@gmail.com' target="_blank" className='mr-2 border py-2 px-3 rounded-xl'
+      <motion.a href='mailto:S.Tolentino0828@gmail.com' target="_blank" title='Email' className='mr-2 border py-2 px-3 rounded-xl'
         whileHover={{ scale: 1.15 }}
       >
-        <FontAwesomeIcon icon={faEnvelope} size='xl'  />
+        <FontAwesomeIcon icon={faEnvelope} size='xl' />
       </motion.a>
-      <motion.a href={resumePDF} target="_blank" className='mr-2 border py-2 px-4 rounded-xl'
+      <motion.a href={resumePDF} target="_blank" title='Resume' className='mr-2 border py-2 px-4 rounded-xl'
         whileHover={{ scale: 1.15 }}
       >
         <FontAwesomeIcon icon={faFile} size='xl'  />
       </motion.a>
-      <motion.a href='https://github.com/SamTole' target="_blank" className='mr-2 border py-2 px-3 rounded-xl'
+      <motion.a href='https://github.com/SamTole' target="_blank" title='Github' className='mr-2 border py-2 px-3 rounded-xl'
         whileHover={{ scale: 1.15 }}
       >
         <FontAwesomeIcon icon={faGithub} size='xl' />
       </motion.a>
-      <motion.a href='https://www.linkedin.com/in/samanthatolentino/' target="_blank" className='border py-2 px-3 rounded-xl'
+      <motion.a href='https://www.linkedin.com/in/samanthatolentino/' target="_blank" title='LinkedIn' className='border py-2 px-3 rounded-xl'
         whileHover={{ scale: 1.15 }}
       >
         <FontAwesomeIcon icon={faLinkedin} size='xl' />
@@ -62,7 +62,7 @@ function App() {
   }
 
   return (
-    <div className='karla-font pt-15 text-brown-1'>
+    <div className='karla-font lg:pt-15 pt-8 text-brown-1'>
       <motion.div className='grid grid-cols-12'
         variants={sectionContainerVariants}
         initial='hidden'
@@ -83,7 +83,7 @@ function App() {
         </motion.div>
 
         {/* Social Media */}
-        <div className='col-start-11 flex items-center justify-end'>
+        <div className='col-start-11 lg:flex hidden items-center justify-end'>
           {getSocialMediaIcons()}
         </div>
         
@@ -106,18 +106,17 @@ function App() {
           variants={sectionVariants}
         >
           <SectionProjects />
-          <div className='flex items-center justify-center text-sm'>
+          <div className='flex items-center justify-center text-sm py-5'>
             {getSocialMediaIcons()}
           </div>
         </motion.div>
 
         {/* Footer */}
-        <motion.div className='row-start-6 col-span-12 bg-tan-1 pb-3'
+        <motion.div className='row-start-6 col-span-12 bg-tan-1 p-3'
           variants={sectionVariants}
         >
-          <div className='flex flex-col items-center justify-center text-sm'>
-            {/* {getSocialMediaIcons()} */}
-            <p className='mt-5'>&#169; 2025 - Present, Samantha Tolentino. All illustrations created by me.</p>
+          <div className='flex flex-col items-center justify-center text-sm text-center'>
+            <p>&#169; 2025 - Present, Samantha Tolentino. All illustrations created by me.</p>
           </div>
         </motion.div>
       </motion.div>

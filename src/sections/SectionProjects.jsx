@@ -21,7 +21,7 @@ const SectionProjects = () => {
   }
 
   return (
-    <div className='flex flex-col max-w-4xl mx-auto text-brown-1 px-15 pb-8 font-medium'>
+    <div className='flex flex-col max-w-4xl mx-auto text-brown-1 lg:px-15 px-8 pb-8 font-medium'>
       <div className='flex items-center mb-2'>
           <motion.div
               initial={{ rotate: 0 }}

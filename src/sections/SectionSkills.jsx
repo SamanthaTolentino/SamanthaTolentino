@@ -32,16 +32,18 @@ const SectionSkills = () => {
     ]
 
     const getSkillsDiv = (skill, index) => {
-        return <motion.div key={index} className={`flex items-center justify-center rounded-md py-3 font-medium`}
-            whileHover={{ scale: 1.15 }}
-        >
-            <div className='mr-3'>{skill.component}</div>
-            <p className=''>{skill.name}</p>
-        </motion.div> 
+        return <div key={index} className={`flex sm:justify-center justify-start rounded-md py-3 font-medium`}>
+            <motion.div className='flex items-center'
+                whileHover={{ scale: 1.15 }}
+            >
+                <div className='mr-3'>{skill.component}</div>
+                <p>{skill.name}</p>
+            </motion.div>
+        </div> 
     }
 
   return (
-    <div className='max-w-4xl mx-auto px-15 pb-6'>
+    <div className='max-w-4xl mx-auto lg:px-15 px-8 pb-6'>
         <div className='flex items-center mb-1'>
             <motion.div
                 initial={{ rotate: 0 }}
@@ -52,7 +54,7 @@ const SectionSkills = () => {
             </motion.div>
             <p className='uppercase text-xl font-bold ml-2 mt-1'>My Skills</p>
         </div>
-        <div className='grid grid-cols-6 items-start gap-4'> 
+        <div className='grid lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 items-start gap-4 sm:ml-0 ml-8'> 
             {skillsComponents.map((skill, index) => getSkillsDiv(skill, index))}
         </div>
     </div>
